@@ -19,6 +19,11 @@ class AppColors {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
+  static const Gradient gradientContainer = LinearGradient(
+    colors: [borderSkyDark, borderSkyMedium, borderSkyDark],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+  );
   static const List<Color> projectColors = [
     Color(0XFF432C4B),
     Color(0XFF243953),

@@ -6,7 +6,9 @@ import 'package:portfolio/core/utils/app_enums.dart';
 import 'package:portfolio/core/utils/app_helpers.dart';
 import 'package:portfolio/core/utils/app_strings.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
+import 'package:portfolio/features/info/views/widgets/gradient_card.dart';
 import 'package:portfolio/features/info/views/widgets/social_media_button.dart';
+import 'package:portfolio/features/info/views/widgets/special_button.dart';
 import 'package:portfolio/main.dart';
 
 class InfoSection extends StatelessWidget {

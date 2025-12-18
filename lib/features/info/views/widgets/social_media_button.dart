@@ -17,6 +17,9 @@ class SocialMediaButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      hoverColor: AppColors.textSky,
+      focusColor: AppColors.textSky,
+      splashColor: AppColors.textSky,
       onTap: () => AppHelpers.launingchUrl(url: url),
       child: Container(
         height: 50,

@@ -1,20 +1,33 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/utils/app_assets.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_enums.dart';
 import 'package:portfolio/core/utils/app_fonts.dart';
+import 'package:portfolio/core/utils/app_strings.dart';
+import 'package:portfolio/core/utils/extensions/context_extensions.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
 import 'package:portfolio/features/experience/data/professional_experience_model.dart';
 import 'package:portfolio/features/experience/views/experience_section.dart';
 import 'package:portfolio/features/info/views/info_section.dart';
+import 'package:portfolio/features/info/views/widgets/social_media_button.dart';
+import 'package:portfolio/features/mobile/views/mobile_layout.dart';
 import 'package:portfolio/features/projects/data/featured_projects_model.dart';
 import 'package:portfolio/features/projects/views/projects_section.dart';
 import 'package:portfolio/features/skills/data/technincal_skills_model.dart';
 import 'package:portfolio/features/skills/views/skills_section.dart';
 
 void main() {
-  runApp(MyApp());
+  bool stopPackage = false;
+  runApp(
+    DevicePreview(
+      // enabled: stopPackage,
+      enabled: !kReleaseMode,
+      builder: (context) => MyApp(), // Wrap your app
+    ),
+  );
 }
 
 final GlobalKey myWorkKey = GlobalKey();
@@ -152,141 +165,56 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       title: 'Peter Tawaky Portfolio',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(gradient: AppColors.gradientBackground),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 100.h(context)),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: InfoSection(),
-                ),
-                SizedBox(height: 80.h(context)),
-                ProfessionalExperienceSection(
-                  professionalExperiences: professionalExperiences,
-                ),
-                SizedBox(height: 80.h(context)),
-                SkillsSection(),
-                SizedBox(height: 80.h(context)),
-                ProjectsSection(),
-                SizedBox(height: 80.h(context)),
-              ],
+      home:
+          // CutoutContainer(),
+          Scaffold(
+            body: LayoutBuilder(
+              builder: (context, constraints) {
+                if (context.isDesktopSize || context.isTabletSize) {
+                  return DesktopAndTabletLayout();
+                } else {
+                  //for mobile
+                  return MobileLayout();
+                }
+              },
             ),
           ),
-        ),
-      ),
     );
   }
 }
 
-class SpecialButton extends StatelessWidget {
-  final Color textColor;
-  final Color backgroundColor;
-  final String title;
-  final void Function()? onTap;
-
-  const SpecialButton({
-    super.key,
-    required this.textColor,
-    required this.backgroundColor,
-    required this.title,
-    this.onTap,
-  });
+//!!!!!!!!!!!!!!!!
+class DesktopAndTabletLayout extends StatelessWidget {
+  const DesktopAndTabletLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: AppColors.buttonSky, width: 1),
-          color: backgroundColor,
-          // color: Color(0XFF00BFFF),
-          borderRadius: BorderRadius.circular(10.sp(context)),
-        ),
-        alignment: Alignment.center,
-        height: 44,
-        width: 163.13,
-        child: Text(
-          title,
-          style: TextStyle(
-            color: textColor,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-            fontFamily: AppFonts.poppins,
-          ),
+    return Container(
+      decoration: BoxDecoration(gradient: AppColors.gradientBackground),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 100.h(context)),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 50),
+              child: InfoSection(),
+            ),
+            SizedBox(height: 80.h(context)),
+            ProfessionalExperienceSection(
+              professionalExperiences: professionalExperiences,
+            ),
+            SizedBox(height: 80.h(context)),
+            SkillsSection(),
+            SizedBox(height: 80.h(context)),
+            ProjectsSection(),
+            SizedBox(height: 80.h(context)),
+          ],
         ),
       ),
-    );
-  }
-}
-
-class GradientCard extends StatefulWidget {
-  final Widget child;
-  final Color color1Begin;
-  final Color color2Begin;
-  final Color color1End;
-  final Color color2End;
-  const GradientCard({
-    super.key,
-    required this.child,
-    required this.color1Begin,
-    required this.color2Begin,
-    required this.color1End,
-    required this.color2End,
-  });
-
-  @override
-  State<GradientCard> createState() => _GradientCardState();
-}
-
-class _GradientCardState extends State<GradientCard>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<Color?> _color1;
-  late Animation<Color?> _color2;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 3),
-    )..repeat(reverse: true);
-    _color1 = ColorTween(
-      begin: widget.color1Begin,
-      end: widget.color1End,
-    ).animate(_controller);
-    _color2 = ColorTween(
-      begin: widget.color2Begin,
-      end: widget.color2End,
-    ).animate(_controller);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (context, child) {
-        return Container(
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(colors: [_color1.value!, _color2.value!]),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: widget.child,
-        );
-      },
     );
   }
 }
