@@ -8,7 +8,6 @@ import 'package:portfolio/features/projects/views/widgets/project_card.dart';
 import 'package:portfolio/main.dart';
 
 class ProjectsSection extends StatelessWidget {
-  
   const ProjectsSection({super.key});
 
   @override
@@ -48,7 +47,7 @@ class ProjectsSection extends StatelessWidget {
           ),
 
           GenericGridViewBuilder<FeaturedProjectsModel>(
-            childAspectRatio: 1.1,
+            childAspectRatio: 1,
             items: projects,
             itemBuilder: (item) => ProjectCard(item: item),
           ),
