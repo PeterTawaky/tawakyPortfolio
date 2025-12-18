@@ -46,11 +46,11 @@ class ProjectsSection extends StatelessWidget {
             ),
           ),
 
-          // GenericGridViewBuilder<FeaturedProjectsModel>(
-          //   childAspectRatio: 1,
-          //   items: projects,
-          //   itemBuilder: (item) => ProjectCard(item: item),
-          // ),
+          GenericGridViewBuilder<FeaturedProjectsModel>(
+            childAspectRatio: 1,
+            items: projects,
+            itemBuilder: (item) => ProjectCard(item: item),
+          ),
         ],
       ),
     );
