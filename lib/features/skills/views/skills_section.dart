@@ -46,6 +46,7 @@ class SkillsSection extends StatelessWidget {
           ),
           GenericGridViewBuilder<TechnicalSkillsModel>(
             crossAxisCount: context.isTabletSize ? 2 : 3,
+            childAspectRatio: context.isTabletSize ? 1.1 : 2.1,
             items: skillsData,
             itemBuilder: (item) => SkillCard(model: item),
           ),
