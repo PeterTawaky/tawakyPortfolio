@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
+import 'package:portfolio/core/utils/extensions/num_extensions.dart';
 import 'package:portfolio/features/mobile/views/widgets/experience_mobile_section.dart';
 import 'package:portfolio/features/mobile/views/widgets/fixed_section.dart';
 import 'package:portfolio/features/mobile/views/widgets/info_mobile_section.dart';
@@ -30,6 +31,7 @@ class MobileLayout extends StatelessWidget {
             currentIndex: currentIndex,
             pageController: pageController,
           ),
+          SizedBox(height: 18.h(context)),
           ValueListenableBuilder(
             valueListenable: currentIndex,
             builder: (context, value, child) {

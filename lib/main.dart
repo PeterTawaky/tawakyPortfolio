@@ -5,14 +5,11 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/utils/app_assets.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_enums.dart';
-import 'package:portfolio/core/utils/app_fonts.dart';
-import 'package:portfolio/core/utils/app_strings.dart';
 import 'package:portfolio/core/utils/extensions/context_extensions.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
 import 'package:portfolio/features/experience/data/professional_experience_model.dart';
 import 'package:portfolio/features/experience/views/experience_section.dart';
 import 'package:portfolio/features/info/views/info_section.dart';
-import 'package:portfolio/features/info/views/widgets/social_media_button.dart';
 import 'package:portfolio/features/mobile/views/mobile_layout.dart';
 import 'package:portfolio/features/projects/data/featured_projects_model.dart';
 import 'package:portfolio/features/projects/views/projects_section.dart';
@@ -40,7 +37,7 @@ List<ProfessionalExperienceModel> professionalExperiences = [
     description:
         'Designed and implemented a comprehensive PV Solar SCADA System with advanced features:',
     highlights: [
-      'Integrated PLC communication via Snap7 for real-time industrial data acquisition', 
+      'Integrated PLC communication via Snap7 for real-time industrial data acquisition',
       'Implemented RBAC authentication system for secure access control',
       'Developed dynamic Excel-imported tag management for flexible system configuration',
       'Created real-time telemetry visualization using LTTB downsampling and Flutter Canvas',
