@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
+import 'package:portfolio/core/utils/extensions/context_extensions.dart';
 import 'package:portfolio/features/mobile/views/widgets/project_mobile_details_widget.dart';
 import 'package:portfolio/features/projects/data/featured_projects_model.dart';
 
@@ -70,8 +71,8 @@ class ProjectCardMobile extends StatelessWidget {
                         children: [
                           Text(
                             project.title,
-                            style: const TextStyle(
-                              fontSize: 11,
+                            style: TextStyle(
+                              fontSize: context.isTabletSize ? 24 : 11,
                               fontWeight: FontWeight.bold,
                               color: AppColors.white,
                               letterSpacing: 0.3,
@@ -93,7 +94,7 @@ class ProjectCardMobile extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                           ),
 
-                          const SizedBox(height: 55),
+                          SizedBox(height: context.isTabletSize ? 245 : 55),
 
                           Row(
                             children: [
@@ -116,13 +117,13 @@ class ProjectCardMobile extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                child: const Row(
+                                child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Text(
                                       'Preview',
                                       style: TextStyle(
-                                        fontSize: 9,
+                                        fontSize: context.isTabletSize ? 18 : 9,
                                         fontWeight: FontWeight.w700,
                                         color: AppColors.primaryBackgroundColor,
                                         letterSpacing: 0.5,

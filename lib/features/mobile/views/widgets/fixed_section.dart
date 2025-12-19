@@ -5,6 +5,7 @@ import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_enums.dart';
 import 'package:portfolio/core/utils/app_fonts.dart';
 import 'package:portfolio/core/utils/app_strings.dart';
+import 'package:portfolio/core/utils/extensions/context_extensions.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
 import 'package:portfolio/features/info/views/widgets/social_media_button.dart';
 import 'package:portfolio/features/mobile/views/widgets/custom_tab_bar.dart';
@@ -38,7 +39,7 @@ class FixedSection extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    SizedBox(height: 138.h(context)),
+                    SizedBox(height: 145.h(context)),
                     Text(
                       AppStrings.myName,
                       style: TextStyle(
@@ -157,11 +158,11 @@ class FixedSection extends StatelessWidget {
           ),
         ),
         Positioned(
-          left: 91.5.w(context),
+          left: context.isTabletSize ? 111.5.w(context) : 91.5.w(context),
           top: 82.h(context),
           child: Container(
             alignment: Alignment.center,
-            width: 220.w(context),
+            width: context.isTabletSize ? 160.w(context) : 220.w(context),
             height: 220.h(context),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(32.r(context)),
@@ -175,7 +176,7 @@ class FixedSection extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(32.r(context)),
                 child: Container(
-                  width: 200.w(context),
+                  width: 200.h(context),
                   height: 200.h(context),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(32.r(context)),
