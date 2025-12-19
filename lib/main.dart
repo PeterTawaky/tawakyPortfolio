@@ -142,7 +142,11 @@ class MyApp extends StatelessWidget {
             body: LayoutBuilder(
               builder: (context, constraints) {
                 if (context.isDesktopSize || context.isTabletSize) {
-                  return DesktopAndTabletLayout();
+                  if (context.isPortraitOrientation) {
+                    return MobileLayout(); //for tablet portrait
+                  } else {
+                    return DesktopAndTabletLayout(); //for tablet landscape and laptop
+                  }
                 } else {
                   //for mobile
                   return MobileLayout();
