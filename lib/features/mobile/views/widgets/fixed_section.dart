@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/continuous_bounce_effect.dart';
 import 'package:portfolio/core/utils/app_assets.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_enums.dart';
@@ -26,7 +27,7 @@ class FixedSection extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w(context)),
           child: Column(
             children: [
-              SizedBox(height: 180.h(context)),
+              SizedBox(height: 160.h(context)),
               Container(
                 height: 368.h(context),
                 width: 353.w(context),
@@ -167,17 +168,27 @@ class FixedSection extends StatelessWidget {
               gradient: AppColors.gradientBackground,
             ),
 
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(32.r(context)),
-              child: Container(
-                width: 200.w(context),
-                height: 200.h(context),
-                decoration: BoxDecoration(
-                  border: Border.all(color: AppColors.borderSkyDark, width: 4),
-                  image: DecorationImage(
-                    image: AssetImage(Assets.imagesTawaky),
-                    fit:
-                        BoxFit.cover, // مهم عشان الصورة تغطي كامل الـ Container
+            child: ContinuousBounceEffect(
+              duration: 1200,
+              speedFactor: 1.5,
+              bounceDistance: -8,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(32.r(context)),
+                child: Container(
+                  width: 200.w(context),
+                  height: 200.h(context),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(32.r(context)),
+
+                    border: Border.all(
+                      color: AppColors.borderSkyDark,
+                      width: 2,
+                    ),
+                    image: DecorationImage(
+                      image: AssetImage(Assets.imagesTawaky),
+                      fit: BoxFit
+                          .cover, // مهم عشان الصورة تغطي كامل الـ Container
+                    ),
                   ),
                 ),
               ),
