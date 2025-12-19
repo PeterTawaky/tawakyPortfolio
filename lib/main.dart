@@ -23,8 +23,8 @@ void main() {
   bool stopPackage = false;
   runApp(
     DevicePreview(
-      // enabled: stopPackage,
-      enabled: !kReleaseMode,
+      enabled: stopPackage,
+      // enabled: !kReleaseMode,
       builder: (context) => MyApp(), // Wrap your app
     ),
   );
@@ -40,7 +40,7 @@ List<ProfessionalExperienceModel> professionalExperiences = [
     description:
         'Designed and implemented a comprehensive PV Solar SCADA System with advanced features:',
     highlights: [
-      'Integrated PLC communication via Snap7 for real-time industrial data acquisition',
+      'Integrated PLC communication via Snap7 for real-time industrial data acquisition', 
       'Implemented RBAC authentication system for secure access control',
       'Developed dynamic Excel-imported tag management for flexible system configuration',
       'Created real-time telemetry visualization using LTTB downsampling and Flutter Canvas',
