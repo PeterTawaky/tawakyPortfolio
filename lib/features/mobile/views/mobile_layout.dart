@@ -37,7 +37,7 @@ class MobileLayout extends StatelessWidget {
                 child: PageView.builder(
                   controller: pageController,
                   itemBuilder: (context, index) {
-                    return Expanded(child: screens[index]);
+                    return screens[index];
                   },
                   itemCount: 4,
                   onPageChanged: (value) {
