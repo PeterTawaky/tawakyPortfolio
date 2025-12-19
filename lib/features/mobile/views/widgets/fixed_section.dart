@@ -91,7 +91,10 @@ class FixedSection extends StatelessWidget {
                     ValueListenableBuilder(
                       valueListenable: currentIndex,
                       builder: (context, value, child) {
-                        return CustomTabBar(currentIndex: currentIndex,pageController: pageController,);
+                        return CustomTabBar(
+                          currentIndex: currentIndex,
+                          pageController: pageController,
+                        );
                       },
                     ),
 
@@ -173,6 +176,7 @@ class FixedSection extends StatelessWidget {
             ),
           ),
         ),
+        
       ],
     );
   }

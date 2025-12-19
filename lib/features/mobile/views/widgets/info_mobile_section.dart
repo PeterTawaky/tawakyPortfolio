@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
+import 'package:portfolio/core/utils/app_helpers.dart';
+import 'package:portfolio/core/utils/app_strings.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
 
 class InfoMobileSection extends StatelessWidget {
@@ -21,6 +23,45 @@ class InfoMobileSection extends StatelessWidget {
           title: 'Desktop | Web | Mobile',
         ),
         InfoMobileRow(icon: Icons.autorenew, title: 'n8n Workflows'),
+        Spacer(),
+        InkWell(
+          onTap: () => AppHelpers.launingchUrl(url: AppStrings.cvDirectLink),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+            decoration: BoxDecoration(
+              color: AppColors.textSky.withOpacity(0.95),
+              borderRadius: BorderRadius.circular(8),
+              boxShadow: [
+                BoxShadow(
+                  color: AppColors.textSky.withOpacity(0.5),
+                  blurRadius: 8,
+                  spreadRadius: 2,
+                ),
+              ],
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  AppStrings.cv,
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.primaryBackgroundColor,
+                    letterSpacing: 0.5,
+                  ),
+                ),
+                SizedBox(width: 4),
+                Icon(
+                  Icons.arrow_forward_rounded,
+                  color: AppColors.primaryBackgroundColor,
+                  size: 10,
+                ),
+              ],
+            ),
+          ),
+        ),
+        SizedBox(height: 10.h(context)),
       ],
     );
   }

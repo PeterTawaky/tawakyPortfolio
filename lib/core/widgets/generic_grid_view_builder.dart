@@ -31,7 +31,7 @@ class GenericGridViewBuilder<T> extends StatelessWidget {
       padding: padding ?? const EdgeInsets.all(20),
       itemCount: items.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: context.isTabletSize ? 2 : 3,
+        crossAxisCount: crossAxisCount,
         crossAxisSpacing: crossAxisSpacing,
         mainAxisSpacing: mainAxisSpacing,
         childAspectRatio: childAspectRatio,

@@ -6,13 +6,11 @@ class FeaturedProjectsModel {
   final String title;
   final String description;
   final String image;
-  final List<String> items;
   final String externalLink;
 
   FeaturedProjectsModel({
     required this.pointOfView,
     required this.title,
-    required this.items,
     required this.description,
     required this.externalLink,
     required this.image,

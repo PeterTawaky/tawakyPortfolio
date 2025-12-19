@@ -1,5 +1,4 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/utils/app_assets.dart';
@@ -94,15 +93,7 @@ final List<FeaturedProjectsModel> projects = [
     title: "SCADA - PV Solar System",
     description:
         'Industrial Automation Desktop Project for Data Visualization and Control.',
-    items: [
-      'Snap7',
-      'LTTB downsampling',
-      'RBAC',
-      'Streams',
-      'Tia',
-      'PLC Integration',
-      'Analytics',
-    ],
+
     image: Assets.imagesScadaCover,
   ),
   FeaturedProjectsModel(
@@ -110,50 +101,29 @@ final List<FeaturedProjectsModel> projects = [
     title: "GoPark - Smart Parking System",
     description:
         'IoT-enabled parking management system with ESP32 integration for remote garage control. Features Firebase authentication, real-time monitoring, and local authentication with Cubit state management.',
-    items: [
-      'IoT',
-      'ESP32',
-      'Cubit',
-      'Firebase',
-      'Biometric Authentication',
-      'DI',
-    ],
+
     externalLink:
         'https://drive.google.com/file/d/1X9b5GCRO1X1Y2cSOr_jVvee2h0HVMG_y/view?usp=sharing',
     image: Assets.imagesGoParkCover,
   ),
-  FeaturedProjectsModel(
-    externalLink:
-        'https://everlasting-chip-3ae.notion.site/5de5201af48d49eebddeac15ddf1cbff?v=bec9cb526f774eb292fbfea04b652f69&source=copy_link',
-    pointOfView: PointOfView.gitHub,
-    title: "MTE Notion Template",
-    description: 'Tracking my Daily habit and add them to notion database',
-    items: [
-      'Notion Integration',
-      'API',
-      'Secure Token Storage',
-      'Bloc',
-      'CRUD',
-      'HTTP',
-    ],
-    image: Assets.imagesNotionCover,
-  ),
-  FeaturedProjectsModel(
-    externalLink:
-        'https://everlasting-chip-3ae.notion.site/5de5201af48d49eebddeac15ddf1cbff?v=bec9cb526f774eb292fbfea04b652f69&source=copy_link',
-    pointOfView: PointOfView.gitHub,
-    title: "Stock Management System - n8n",
-    description: 'Tracking my Daily habit and add them to notion database',
-    items: [
-      'Notion Integration',
-      'API',
-      'Secure Token Storage',
-      'Bloc',
-      'CRUD',
-      'HTTP',
-    ],
-    image: Assets.imagesN8nCover,
-  ),
+  // FeaturedProjectsModel(
+  //   externalLink:
+  //       'https://everlasting-chip-3ae.notion.site/5de5201af48d49eebddeac15ddf1cbff?v=bec9cb526f774eb292fbfea04b652f69&source=copy_link',
+  //   pointOfView: PointOfView.gitHub,
+  //   title: "MTE Notion Template",
+  //   description: 'Tracking my Daily habit and add them to notion database',
+
+  //   image: Assets.imagesNotionCover,
+  // ),
+  // FeaturedProjectsModel(
+  //   externalLink:
+  //       'https://everlasting-chip-3ae.notion.site/5de5201af48d49eebddeac15ddf1cbff?v=bec9cb526f774eb292fbfea04b652f69&source=copy_link',
+  //   pointOfView: PointOfView.gitHub,
+  //   title: "Stock Management System - n8n",
+  //   description: 'Tracking my Daily habit and add them to notion database',
+
+  //   image: Assets.imagesN8nCover,
+  // ),
 ];
 
 class MyApp extends StatelessWidget {

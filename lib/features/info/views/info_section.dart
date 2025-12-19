@@ -88,7 +88,7 @@ class InfoSection extends StatelessWidget {
                   backgroundColor: AppColors.primaryBackgroundColor,
                   onTap: () => AppHelpers.launingchUrl(
                     url:
-                        "https://drive.google.com/file/d/1MX2qz8WNImy4R-u2Ldi8KZmcuU8sC2fB/view?usp=sharing",
+                       AppStrings.cvDirectLink
                   ),
                 ),
               ],
