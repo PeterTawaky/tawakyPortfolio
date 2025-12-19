@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_strings.dart';
+import 'package:portfolio/core/utils/extensions/context_extensions.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
 import 'package:portfolio/core/widgets/generic_grid_view_builder.dart';
 import 'package:portfolio/features/skills/data/technincal_skills_model.dart';
@@ -44,6 +45,7 @@ class SkillsSection extends StatelessWidget {
             ),
           ),
           GenericGridViewBuilder<TechnicalSkillsModel>(
+            crossAxisCount: context.isTabletSize ? 2 : 3,
             items: skillsData,
             itemBuilder: (item) => SkillCard(model: item),
           ),

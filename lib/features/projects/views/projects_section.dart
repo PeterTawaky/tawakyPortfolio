@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
 import 'package:portfolio/core/utils/app_strings.dart';
+import 'package:portfolio/core/utils/extensions/context_extensions.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
 import 'package:portfolio/core/widgets/generic_grid_view_builder.dart';
 import 'package:portfolio/features/projects/data/featured_projects_model.dart';
@@ -47,6 +48,7 @@ class ProjectsSection extends StatelessWidget {
           ),
 
           GenericGridViewBuilder<FeaturedProjectsModel>(
+            crossAxisCount: context.isTabletSize ? 2 : 3,
             childAspectRatio: 1,
             items: projects,
             itemBuilder: (item) => ProjectCard(item: item),
