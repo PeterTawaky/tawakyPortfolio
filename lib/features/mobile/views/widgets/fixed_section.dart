@@ -166,10 +166,12 @@ class FixedSection extends StatelessWidget {
               borderRadius: BorderRadius.circular(32.r(context)),
               gradient: AppColors.gradientBackground,
             ),
+
             child: Container(
               width: 200.w(context),
               height: 200.h(context),
               decoration: BoxDecoration(
+                border: Border.all(color: AppColors.borderSkyDark, width: 4),
                 borderRadius: BorderRadius.circular(32.r(context)),
                 image: DecorationImage(image: AssetImage(Assets.imagesTawaky)),
               ),
