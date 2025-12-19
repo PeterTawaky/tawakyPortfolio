@@ -49,7 +49,7 @@ class ProjectsSection extends StatelessWidget {
 
           GenericGridViewBuilder<FeaturedProjectsModel>(
             crossAxisCount: context.isTabletSize ? 2 : 3,
-            childAspectRatio: 1,
+            childAspectRatio: context.isTabletSize ? 0.8 : 1,
             items: projects,
             itemBuilder: (item) => ProjectCard(item: item),
           ),
