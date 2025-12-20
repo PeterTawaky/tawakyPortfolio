@@ -25,5 +25,5 @@ class AppStrings {
   static const String haDescription2 = 'PV Solar SCADA System ';
   static const String haDescription3 = 'with advanced features:';
   static const String cvDirectLink =
-      "https://drive.google.com/file/d/1MX2qz8WNImy4R-u2Ldi8KZmcuU8sC2fB/view?usp=sharing";
+      "https://drive.google.com/file/d/1_ttcsRNxM4otJlPJ71SwdRfZWvZhhM2d/view?usp=sharing";
 }
