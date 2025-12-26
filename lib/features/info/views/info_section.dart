@@ -86,10 +86,8 @@ class InfoSection extends StatelessWidget {
                   textColor: AppColors.textSky,
                   title: AppStrings.cv,
                   backgroundColor: AppColors.primaryBackgroundColor,
-                  onTap: () => AppHelpers.launingchUrl(
-                    url:
-                       AppStrings.cvDirectLink
-                  ),
+                  onTap: () =>
+                      AppHelpers.launingchUrl(url: AppStrings.cvDirectLink),
                 ),
               ],
             ),
@@ -97,17 +95,20 @@ class InfoSection extends StatelessWidget {
             Row(
               children: [
                 SocialMediaButton(
+                  color: Color(0XFF8800EA),
                   platform: SocialMediaPlatform.github,
                   url: 'https://github.com/PeterTawaky',
                 ),
                 SizedBox(width: 10),
                 SocialMediaButton(
+                  color: Color(0XFF0A66C2),
                   platform: SocialMediaPlatform.linkedin,
                   url: 'https://www.linkedin.com/in/peterayman/',
                 ),
                 SizedBox(width: 10),
 
                 SocialMediaButton(
+                  color: Color(0XFFEA4335),
                   platform: SocialMediaPlatform.gmail,
                   url:
                       'mailto:peterayman800@gmail.com?subject=Contact%20from%20your%20website&body=Hello%20Peter,%0A%0AI%20would%20like%20to%20contact%20you.',
@@ -115,12 +116,14 @@ class InfoSection extends StatelessWidget {
                 SizedBox(width: 10),
 
                 SocialMediaButton(
+                  color: Color(0XFF25D366),
                   platform: SocialMediaPlatform.whatsapp,
                   url: 'https://wa.me/201210711093',
                 ),
                 SizedBox(width: 10),
 
                 SocialMediaButton(
+                  color: Color(0XFF000000),
                   platform: SocialMediaPlatform.x,
                   url: 'https://x.com/Peter__Ayman',
                 ),

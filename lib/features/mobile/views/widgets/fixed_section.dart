@@ -65,17 +65,20 @@ class FixedSection extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           SocialMediaButton(
+                            color: Color(0XFF8800EA),
                             platform: SocialMediaPlatform.github,
                             url: 'https://github.com/PeterTawaky',
                           ),
                           SizedBox(width: 10),
                           SocialMediaButton(
+                            color: Color(0XFF0A66C2),
                             platform: SocialMediaPlatform.linkedin,
                             url: 'https://www.linkedin.com/in/peterayman/',
                           ),
                           SizedBox(width: 10),
 
                           SocialMediaButton(
+                            color: Color(0XFFD93025),
                             platform: SocialMediaPlatform.gmail,
                             url:
                                 'mailto:peterayman800@gmail.com?subject=Contact%20from%20your%20website&body=Hello%20Peter,%0A%0AI%20would%20like%20to%20contact%20you.',
@@ -83,6 +86,7 @@ class FixedSection extends StatelessWidget {
                           SizedBox(width: 10),
 
                           SocialMediaButton(
+                            color: Color(0XFF25D366),
                             platform: SocialMediaPlatform.whatsapp,
                             url: 'https://wa.me/201210711093',
                           ),
