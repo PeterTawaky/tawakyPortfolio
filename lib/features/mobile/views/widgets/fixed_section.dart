@@ -80,8 +80,7 @@ class FixedSection extends StatelessWidget {
                           SocialMediaButton(
                             color: Color(0XFFD93025),
                             platform: SocialMediaPlatform.gmail,
-                            url:
-                                'mailto:peterayman800@gmail.com?subject=Contact%20from%20your%20website&body=Hello%20Peter,%0A%0AI%20would%20like%20to%20contact%20you.',
+                            url: 'mailto:peter.ayman.dev@gmail.com',
                           ),
                           SizedBox(width: 10),
 
