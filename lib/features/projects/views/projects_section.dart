@@ -18,7 +18,7 @@ class ProjectsSection extends StatelessWidget {
       child: Column(
         key: myWorkKey,
         children: [
-          Text.rich(
+          SelectableText.rich(
             TextSpan(
               text: AppStrings.featured,
               style: TextStyle(
@@ -38,7 +38,7 @@ class ProjectsSection extends StatelessWidget {
               ],
             ),
           ),
-          Text(
+          SelectableText(
             AppStrings.featuredProjectsSubtitle,
             style: TextStyle(
               fontSize: 18.sp(context),

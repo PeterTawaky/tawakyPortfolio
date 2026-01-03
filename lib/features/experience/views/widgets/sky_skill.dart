@@ -16,7 +16,7 @@ class SkySkill extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: const Color(0XFF0D5673)),
       ),
-      child: Text(
+      child: SelectableText(
         skill,
         style: const TextStyle(
           color: AppColors.white,

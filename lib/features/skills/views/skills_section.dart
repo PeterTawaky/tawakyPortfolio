@@ -16,7 +16,7 @@ class SkillsSection extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Text.rich(
+          SelectableText.rich(
             TextSpan(
               text: AppStrings.technical,
               style: TextStyle(
@@ -36,7 +36,7 @@ class SkillsSection extends StatelessWidget {
               ],
             ),
           ),
-          Text(
+          SelectableText(
             AppStrings.technicalSkillsSubtitle,
             style: TextStyle(
               fontSize: 18.sp(context),

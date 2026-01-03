@@ -49,7 +49,7 @@ class _ProjectCardState extends State<ProjectCard> {
                       SizedBox(height: 16.h(context)),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Text(
+                        child: SelectableText(
                           widget.item.title,
                           style: TextStyle(
                             fontSize: 20.sp(context),
@@ -62,13 +62,13 @@ class _ProjectCardState extends State<ProjectCard> {
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Text(
+                        child: SelectableText(
                           widget.item.description,
                           style: TextStyle(
+                            overflow: TextOverflow.ellipsis,
                             fontSize: 14.sp(context),
                             color: AppColors.grey,
                           ),
-                          overflow: TextOverflow.ellipsis,
                           maxLines: 3,
                         ),
                       ),

@@ -48,7 +48,7 @@ class _SkillCardState extends State<SkillCard> {
             const SizedBox(height: 16),
 
             // TITLE
-            Text(
+            SelectableText(
               widget.model.title,
               style: TextStyle(
                 fontSize: 20,
