@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
+import 'package:portfolio/core/utils/app_constants.dart';
 import 'package:portfolio/core/utils/app_helpers.dart';
 import 'package:portfolio/core/utils/app_strings.dart';
 import 'package:portfolio/core/utils/extensions/num_extensions.dart';
@@ -25,7 +26,7 @@ class InfoMobileSection extends StatelessWidget {
         InfoMobileRow(icon: Icons.autorenew, title: 'n8n Workflows'),
         Spacer(),
         InkWell(
-          onTap: () => AppHelpers.launingchUrl(url: AppStrings.cvDirectLink),
+          onTap: () => AppHelpers.launingchUrl(url: AppConstants.cvDirectLink),
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(

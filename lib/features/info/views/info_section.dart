@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/continuous_bounce_effect.dart';
 import 'package:portfolio/core/utils/app_assets.dart';
 import 'package:portfolio/core/utils/app_colors.dart';
+import 'package:portfolio/core/utils/app_constants.dart';
 import 'package:portfolio/core/utils/app_enums.dart';
 import 'package:portfolio/core/utils/app_helpers.dart';
 import 'package:portfolio/core/utils/app_strings.dart';
@@ -87,7 +88,7 @@ class InfoSection extends StatelessWidget {
                   title: AppStrings.cv,
                   backgroundColor: AppColors.primaryBackgroundColor,
                   onTap: () =>
-                      AppHelpers.launingchUrl(url: AppStrings.cvDirectLink),
+                      AppHelpers.launingchUrl(url: AppConstants.cvDirectLink),
                 ),
               ],
             ),
@@ -110,8 +111,7 @@ class InfoSection extends StatelessWidget {
                 SocialMediaButton(
                   color: Color(0XFFEA4335),
                   platform: SocialMediaPlatform.gmail,
-                  url:
-                      'mailto:peter.ayman.dev@gmail.com',
+                  url: 'mailto:peter.ayman.dev@gmail.com',
                 ),
                 SizedBox(width: 10),
 
