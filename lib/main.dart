@@ -97,6 +97,16 @@ final List<FeaturedProjectsModel> projects = [
     image: Assets.imagesScadaCover,
   ),
   FeaturedProjectsModel(
+    externalLink:
+        'https://drive.google.com/file/d/13ITckgX2RX71B1DXtC_7GBA9dEBVTWot/view?usp=sharing',
+    pointOfView: PointOfView.secured,
+    title: "Weighbridge Management System",
+    description:
+        'Developed a secure, offline-capable system with RBAC authentication, an SQLite (sqflite) data layer, and automated PDF report generation with printing for operational master data (clients, warehouses, products).',
+
+    image: Assets.accountingProject,
+  ),
+  FeaturedProjectsModel(
     pointOfView: PointOfView.gitHub,
     title: "GoPark - Smart Parking System",
     description:
@@ -106,24 +116,6 @@ final List<FeaturedProjectsModel> projects = [
         'https://drive.google.com/file/d/1X9b5GCRO1X1Y2cSOr_jVvee2h0HVMG_y/view?usp=sharing',
     image: Assets.imagesGoParkCover,
   ),
-  // FeaturedProjectsModel(
-  //   externalLink:
-  //       'https://everlasting-chip-3ae.notion.site/5de5201af48d49eebddeac15ddf1cbff?v=bec9cb526f774eb292fbfea04b652f69&source=copy_link',
-  //   pointOfView: PointOfView.gitHub,
-  //   title: "MTE Notion Template",
-  //   description: 'Tracking my Daily habit and add them to notion database',
-
-  //   image: Assets.imagesNotionCover,
-  // ),
-  // FeaturedProjectsModel(
-  //   externalLink:
-  //       'https://everlasting-chip-3ae.notion.site/5de5201af48d49eebddeac15ddf1cbff?v=bec9cb526f774eb292fbfea04b652f69&source=copy_link',
-  //   pointOfView: PointOfView.gitHub,
-  //   title: "Stock Management System - n8n",
-  //   description: 'Tracking my Daily habit and add them to notion database',
-
-  //   image: Assets.imagesN8nCover,
-  // ),
 ];
 
 class MyApp extends StatelessWidget {

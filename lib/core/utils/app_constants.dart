@@ -8,5 +8,5 @@ class AppConstants {
 
   static const int animationDuration = 200;
   static const String cvDirectLink =
-      "https://drive.google.com/file/d/1uc16enEDmko9f2_my2p7t2Ciwuvs6Q0g/view?usp=sharing";
+      "https://drive.google.com/file/d/1IikxsjTVO5p6ZlybA19XdBfGrRfa8Q7r/view?usp=sharing";
 }
