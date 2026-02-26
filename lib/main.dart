@@ -98,7 +98,7 @@ final List<FeaturedProjectsModel> projects = [
   ),
   FeaturedProjectsModel(
     externalLink:
-        'https://drive.google.com/file/d/13ITckgX2RX71B1DXtC_7GBA9dEBVTWot/view?usp=sharing',
+        'https://drive.google.com/file/d/17hVnGUl5boK5WZglNU9ZorWSmqECe6e2/view?usp=sharing',
     pointOfView: PointOfView.secured,
     title: "Weighbridge Management System",
     description:
