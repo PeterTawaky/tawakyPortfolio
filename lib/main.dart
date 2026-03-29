@@ -104,7 +104,17 @@ final List<FeaturedProjectsModel> projects = [
     description:
         'Developed a secure, offline-capable system with RBAC authentication, an SQLite (sqflite) data layer, and automated PDF report generation with printing for operational master data (clients, warehouses, products).',
 
-    image: Assets.accountingProject,
+    image: Assets.imagesAccounting,
+  ),
+  FeaturedProjectsModel(
+    externalLink:
+        'https://drive.google.com/file/d/1tN_VfkO9N7SMSuE40QfjCbtLOj9oAhJ1/view?usp=sharing',
+    pointOfView: PointOfView.secured,
+    title: "Concrete - ERP System",
+    description:
+        'minimalistic ERP system for managing concrete production and inventory.',
+
+    image: Assets.imagesConcreteErp,
   ),
   FeaturedProjectsModel(
     pointOfView: PointOfView.gitHub,

@@ -1,6 +1,14 @@
 // ignore_for_file: prefer_single_quotes
 class Assets {
-  const Assets._();
+  Assets._();
+  
+  /// Assets for imagesAccounting
+  /// assets/images/accounting.png
+  static const String imagesAccounting = "assets/images/accounting.png";
+
+  /// Assets for imagesConcreteErp
+  /// assets/images/concrete-erp.jfif
+  static const String imagesConcreteErp = "assets/images/concrete-erp.jfif";
 
   /// Assets for imagesGoParkCover
   /// assets/images/go_park_cover.png
@@ -29,5 +37,5 @@ class Assets {
   /// Assets for imagesTawaky2
   /// assets/images/tawaky2.png
   static const String imagesTawaky2 = "assets/images/tawaky2.png";
-  static const String accountingProject = "assets/images/accounting.png";
 }
+
